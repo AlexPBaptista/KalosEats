@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/burgerreg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/footerreg.css">
+    <title>Kalos Eats</title>
+</head>
+
+<body style="background-color: #25544b;">
+
+    <div class="row">
+        <div class="col-1 col-s-12 hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li><a class="menu__item" href="index.html">Início</a></li>
+                <li><a class="menu__item" href="reg.html">Registrar Estabelecimento</a></li>
+                <li><a class="menu__item" href="termoscondicoes.html">Termos e condições</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="title">Registrar o Estabelecimento</div>
+        <form method="POST" action="form.php">
+            <h2>Informações do Dono</h2>
+            <div class="user_details">
+                <div class="input_pox">
+                    <span class="datails">Primeiro nome</span>
+                    <input type="text" name="pnomedono" placeholder="Primeiro nome..." required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Último nome</span>
+                    <input type="text" name="unomedono" placeholder="Último nome..." required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Email</span>
+                    <input type="email" name="email" placeholder="Email..." required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Data de nascimento</span>
+                    <input type="date" name="dnac" placeholder="Data de nascimento..." required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Telefone</span>
+                    <input type="tel" name="telefonedono" placeholder="Telefone..." required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Telemóvel</span>
+                    <input type="tel" name="telemovel" placeholder="Telemóvel..." required>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h2>Informações do Estabelecimento</h2>
+            <br>
+            <div class="gender_details">
+                <input type="checkbox" style="display: none;" value="Café" name="cafe" id="dot-1">
+                <input type="checkbox" style="display: none;" value="Bar" name="bar" id="dot-2">
+                <input type="checkbox" style="display: none;" value="Restaurante" name="restaurante" id="dot-3">
+                <span class="gender_title"> Tipo de Estabelecimento</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="cafe">Café</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="bar">Bar</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="restaurante">Restaurante</span>
+                    </label>
+                </div>
+            </div>
+            <div class="user_details">
+                <div class="input_pox">
+                    <span class="datails">Nome do estabelecimento</span>
+                    <input type="text" name="nomeestabelecimento" placeholder="Nome do estabelecimento..." required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Morada do estabelecimento</span>
+                    <textarea type="text" placeholder="Morada do estabelecimento..." name="morada" id="morada"
+                        required> </textarea>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Horário de abertura</span>
+                    <input type="time" name="horarioabertura" placeholder="Horário de abertura..." id="morada" required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Horário de encerro</span>
+                    <input type="time" name="horarioencerro" placeholder="Horário de encerro..." id="morada" required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Telefone</span>
+                    <input type="tel" name="telefoneestabelecimento" placeholder="Telefone..." required>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Website</span>
+                    <input type="text" name="website" placeholder="Website...">
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" style="cursor: pointer;" value="Registrar Estabelecimento">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#47a190" fill-opacity="1"
+                d="M0,320L80,282.7C160,245,320,171,480,149.3C640,128,800,160,960,170.7C1120,181,1280,171,1360,165.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+            </path>
+        </svg>
+        <div class="footer" style="background-color: #47a190;">
+            <div class="col-fotter">
+                <h4>Kalos Eats©​</h4>
+                <p onclick="home()">Início</p>
+            </div>
+            <div class="col-fotter">
+                <h4>Estabelecimento</h4>
+                <p onclick="reg()">Registar</p>
+            </div>
+            <div class="col-fotter">
+                <h4>Informações​</h4>
+                <p onclick="termoscondicoes()">Termos e Condições</p>
+            </div>
+            <div class="col-fotter">
+                <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook-square" style="font-size:48px;color:#f4f4f4"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram" style="font-size:48px;color:#f4f4f4"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin-square" style="font-size:48px;color:#f4f4f4"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function googleplay() {
+            window.open("https://play.google.com/");
+        }
+        function reg() {
+            location.replace("reg.html");
+        }
+        function termoscondicoes() {
+            location.replace("termoscondicoes.html");
+        }
+        function home() {
+            location.replace("index.html");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+.footer {
+  margin-top: -3.5em;
+  background-color: var(--pcolor);
+  padding: 2em;
+  columns: 4;
+  color: var(--white);
+}
+
+.footer h4,
+.footer p,
+.footer i {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.footer i {
+  margin: 0px 22px;
+  margin-top: 26px;
+}
+
+.col-footer h4 {
+  margin-top: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    margin-top: -5.4em;
+    columns: 2;
+  }
+
+  .footer i {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}

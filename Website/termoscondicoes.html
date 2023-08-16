@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="css/footerreg.css">
+    <title>Kalos Eats</title>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div class="row" style="background-color: #25544b; padding: 1em;">
+        <div class="barradiv">
+            <a class="barral" href="index.html">Início</a>
+            <a class="menu__item" href="termoscondicoes.html">Termos e condições</a>
+            <a class="barrareg" id="testbutton" href="reg.html">Registrar Estabelecimento</a>
+        </div>
+    </div>
+    <svg style="width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#25544B" fill-opacity="1"
+            d="M0,64L48,96C96,128,192,192,288,186.7C384,181,480,107,576,85.3C672,64,768,96,864,133.3C960,171,1056,213,1152,229.3C1248,245,1344,235,1392,229.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+    </svg>
+
+    <div class="row">
+        <div style="height: 2em;" class="col-1 col-s-12 hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li><a class="menu__item" href="index.html">Início</a></li>
+                <li><a class="menu__item" href="reg.html">Registrar Estabelecimento</a></li>
+                <li><a class="menu__item" href="teste.html">Pag. Testes</a></li>
+            </ul>
+        </div>
+        <p style="color:white; font-weight: bold; text-align: justify; width: 70%; display: block; margin: auto;">
+            Termos e Condições </p><br>
+        <div id="demo">
+            <p style="color:white; text-align: justify; width: 70%; display: block; margin: auto;">
+                Bem-vindo a KalosEats!<br><br>
+
+                Estes termos e condições descrevem as regras e regulamentos para o uso do site de KalosEats, localizado
+                em https://www.kaloseats.com.<br><br>
+
+                Ao aceder a este site, presumimos que aceita estes termos e condições. Não continue a usar KalosEats se
+                não concordar com todos os termos e condições declarados nesta página.<br><br>
+                <button type="button" onclick="loadDoc()">Ver mais...</button>
+        </div>
+        <script>
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML =
+                            this.responseText;
+                    }
+                };
+                xhttp.open("GET", "info.txt", true);
+                xhttp.send();
+            }
+        </script>
+    </div>
+    <br> <br>
+    <br> <br>
+
+
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#25544b" fill-opacity="1"
+                d="M0,320L80,282.7C160,245,320,171,480,149.3C640,128,800,160,960,170.7C1120,181,1280,171,1360,165.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+            </path>
+        </svg>
+        <div class="footer">
+            <div class="col-fotter">
+                <h4>Kalos Eats©​</h4>
+                <p onclick="home()">Início</p>
+            </div>
+            <div class="col-fotter">
+                <h4>Estabelecimento</h4>
+                <p onclick="reg()">Registar</p>
+            </div>
+            <div class="col-fotter">
+                <h4>Informações​</h4>
+                <p onclick="termoscondicoes()">Termos e Condições</p>
+            </div>
+            <div class="col-fotter">
+                <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook-square" style="font-size:48px;color:#f4f4f4"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram" style="font-size:48px;color:#f4f4f4"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin-square" style="font-size:48px;color:#f4f4f4"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function googleplay() {
+            window.open("https://play.google.com/");
+        }
+        function reg() {
+            location.replace("reg.html");
+        }
+        function termoscondicoes() {
+            location.replace("termoscondicoes.html");
+        }
+        function home() {
+            location.replace("index.html");
+        }
+    </script>
+</body>
+
+</html>
